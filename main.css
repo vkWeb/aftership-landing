@@ -118,8 +118,11 @@ main {
   flex-grow: 1;
 }
 
-.email-collection-container {
-  max-width: 90%;
+/* When on desktops, make the email container a little smaller */
+@media (min-width: 640px) {
+  .email-collection-container {
+    max-width: 70%;
+  }
 }
 
 .container-of-three-major-pains {
@@ -251,7 +254,7 @@ h1 {
   align-items: center;
   background-color: #f1f5f9;
   border-radius: 0.8rem;
-  padding: 1.2rem;
+  padding: 1rem 0.8rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -259,7 +262,7 @@ h1 {
   flex-grow: 1;
   border: 1px solid #e2e8f0;
   border-radius: 0.8rem;
-  padding: 0.8rem;
+  padding: 0.7rem;
   font-size: 1rem;
   color: var(--black-color);
 }
@@ -269,10 +272,10 @@ h1 {
   color: var(--black-color);
   border: none;
   border-radius: 0.5rem;
-  padding: 0.6rem 1.8rem;
+  padding: 0.6rem 1.4rem;
   font-size: 0.9rem;
   cursor: pointer;
-  margin-left: 0.9rem;
+  margin-left: 0.4rem;
   font-weight: 600;
   display: flex;
   align-items: center;
