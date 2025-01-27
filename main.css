@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/* Reset End */
+
+/* Our styles */
+:root {
+  --black-color: #111828;
+  --yellow-color: #f8ca1e;
+  --white-color: #ffffff;
+}
+
+html {
+  line-height: 1.1;
+  background-color: var(--white-color);
+  font-size: 18px;
+  font-family: "Mona Sans", system-ui;
+  color: var(--black-color);
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Utilities */
+
+.inside-main-container-area {
+  max-width: 1350px;
+  width: 90vw;
+}
+
+.full-width-container {
+  max-width: 100vw;
+}
+
+.center-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utilities END */
+
+main {
+  margin-top: 6rem;
+}
+
+.all-hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.hero-heading {
+  flex-basis: 35rem;
+  flex-grow: 1;
+}
+
+.email-collection-container {
+  max-width: 90%;
+}
+
+.container-of-three-major-pains {
+  flex-basis: 28rem;
+  flex-grow: 0;
+}
+
+h1 {
+  font-family: "Funnel Display", system-ui;
+  font-size: 3rem;
+  position: relative;
+}
+
+.chip {
+  background-color: var(--yellow-color);
+  width: fit-content;
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 400;
+  transform: rotate(-6deg);
+  position: absolute;
+  top: -1.4rem;
+  font-size: 1rem;
+}
+
+/* Styles for pain card */
+.pain-card-container {
+  color: var(--white-color);
+  border-radius: 0.8rem;
+  padding: 1.4rem 1.2rem;
+  border: 0.6rem solid;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 3px -1px rgba(0, 0, 0, 0.2);
+}
+
+.pain-card-container.feature {
+  background-color: #0090ff;
+  border-color: #8ec8f6;
+  transform: rotate(2deg);
+}
+
+.pain-card-container.bug {
+  background-color: #ff5100e0;
+  border-color: #f69a73;
+  transform: rotate(-1deg);
+}
+
+.pain-card-container.support {
+  background-color: #46a758;
+  border-color: #b2ddb5;
+  transform: rotate(4deg);
+}
+
+.pain-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.hand-drawn {
+  color: inherit;
+  width: 2.2em;
+  height: 2.2em;
+}
+
+.hand-drawn.feature {
+  transform: rotate(5deg);
+}
+
+.hand-drawn.bug {
+  transform: rotate(-3deg);
+}
+
+.hand-drawn.support {
+  transform: rotate(3deg);
+}
+
+.pain-description {
+  line-height: 1.3;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Manifesto */
+.manifesto {
+  background-color: #f1f5f9;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.manifesto .paper {
+  border-radius: 1rem;
+  background-color: var(--white-color);
+  max-width: 60%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 4rem 6rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.manifesto .paper p {
+  margin-bottom: 2.5rem;
+}
+
+.manifesto .paper p:last-child {
+  margin-bottom: 0;
+}
+
+.manifesto .paper .subject {
+  position: relative;
+}
+
+.manifesto .paper .subject svg {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  bottom: 0.1em;
+  left: -0.3em;
+}
+
+/* Manifesto End */
+
+/* Email Submit Box */
+.email-submit-box {
+  display: flex;
+  align-items: center;
+  background-color: #f1f5f9;
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.email-input {
+  flex-grow: 1;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: var(--black-color);
+}
+
+#email-button {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+#email-button svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+#email-button:disabled {
+  opacity: 0.7;
+}
+
+#email-button:hover #send-icon {
+  transform: translateX(0.2rem);
+}
+
+#email-button #send-icon {
+  transition: transform 0.2s ease-in;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#email-button #in-progress-icon {
+  display: none;
+  animation: spin 1s linear infinite;
+}
+
+#email-button #done-success-icon {
+  display: none;
+}
+
+/* Email Submit Box End */
+
+/* Other words Start */
+/* .others-words {
+  background: url(blob-scene-haikei.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.others-words .other-words-content-box {
+  color: var(--white-color);
+  width: 40%;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.others-words .other-words-content-box .quote {
+  margin-top: 1.5rem;
+}
+
+.others-words .other-words-content-box .author {
+  margin-top: 1.5rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.others-words .other-words-content-box .author img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+} */
+/* Other words End */
