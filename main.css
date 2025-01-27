@@ -67,6 +67,7 @@ h6 {
   --black-color: #111828;
   --yellow-color: #f8ca1e;
   --white-color: #ffffff;
+  --light-black-color: oklch(0.446 0.03 256.802);
 }
 
 html {
@@ -134,6 +135,10 @@ h1 {
   font-family: "Funnel Display", system-ui;
   font-size: 3rem;
   position: relative;
+}
+
+h2 {
+  color: var(--light-black-color);
 }
 
 .chip {
@@ -212,8 +217,13 @@ h1 {
 /* Manifesto */
 .manifesto {
   background-color: #f1f5f9;
-  padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.manifesto .section-heading {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 
 .manifesto .paper {
@@ -235,7 +245,8 @@ h1 {
 }
 
 .manifesto .paper p,
-#manifesto-email-collection {
+#manifesto-email-collection,
+.signature {
   margin-bottom: 2.5rem;
 }
 
@@ -248,6 +259,23 @@ h1 {
   left: -0.2em;
   width: 4em;
   height: 2em;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.signature .signature-content {
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+.signature .picture {
+  width: 2.7em;
+  height: 2.7em;
+  border-radius: 50%;
 }
 
 /* Manifesto End */
