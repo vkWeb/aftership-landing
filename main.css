@@ -212,18 +212,26 @@ h1 {
 /* Manifesto */
 .manifesto {
   background-color: #f1f5f9;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .manifesto .paper {
   border-radius: 1rem;
   background-color: var(--white-color);
-  max-width: 60%;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  padding: 4rem 6rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding: 2.2rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* When on desktop */
+@media (min-width: 640px) {
+  .manifesto .paper {
+    max-width: 60%;
+    font-size: 1.3rem;
+    padding: 3.3rem;
+  }
 }
 
 .manifesto .paper p {
@@ -234,16 +242,11 @@ h1 {
   margin-bottom: 0;
 }
 
-.manifesto .paper .subject {
+.manifesto .paper svg {
   position: relative;
-}
-
-.manifesto .paper .subject svg {
-  position: absolute;
+  left: -0.2em;
   width: 4em;
-  height: 4em;
-  bottom: 0.1em;
-  left: -0.3em;
+  height: 2em;
 }
 
 /* Manifesto End */
