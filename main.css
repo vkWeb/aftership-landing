@@ -71,7 +71,7 @@ h6 {
 }
 
 html {
-  line-height: 1.1;
+  line-height: 1;
   background-color: var(--white-color);
   font-size: 18px;
   font-family: "Mona Sans", system-ui;
@@ -103,20 +103,101 @@ html {
 /* Utilities END */
 
 main {
-  margin-top: 6rem;
 }
 
-.all-hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 5rem;
+.hero-full-width {
 }
 
 .hero-heading {
-  flex-basis: 35rem;
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5rem;
+}
+
+.hero-h1-h2 {
+  width: 70%;
+}
+
+.hero-h1-h2 h1 {
+  margin-bottom: 1.5rem;
+}
+
+#hero-email-collection {
+  width: 45%;
+}
+
+.other-words-content-box {
+  width: 45%;
+}
+
+.hero-heading h1,
+.hero-heading h2 {
+  text-align: center;
+}
+
+.other-words-content-box {
+  margin-top: 3.1rem;
+  margin-bottom: 3.1rem;
+  color: var(--light-black-color);
+  font-size: 1rem;
+  line-height: 1.4;
+  border-left: 0.5rem solid var(--light-black-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.other-words-content-box .author {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.other-words-content-box .author > p {
+  font-weight: 600;
+}
+
+.other-words-content-box .author img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: var(--white-color);
+}
+
+.other-words-content-box .quote-icon {
+  width: 2em;
+  height: 2em;
+  margin-top: 0.5rem;
+}
+
+.other-words-content-box .quote {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.other-words-content-box .quote-source a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: inherit;
+}
+
+.other-words-content-box .quote-source .out-link-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.other-words-content-box .quote-source a:hover .out-link-icon {
+  transform: translateY(-0.1rem) translateX(0.1rem);
+}
+
+.other-words-content-box .quote-source a .out-link-icon {
+  transition: transform 0.1s ease-in;
 }
 
 /* When on desktops, make the email container a little smaller */
@@ -124,11 +205,6 @@ main {
   .email-collection-container {
     max-width: 70%;
   }
-}
-
-.container-of-three-major-pains {
-  flex-basis: 28rem;
-  flex-grow: 0;
 }
 
 h1 {
@@ -154,6 +230,11 @@ h2 {
 }
 
 /* Styles for pain card */
+
+.container-of-three-major-pains {
+  margin-top: 10rem;
+}
+
 .pain-card-container {
   color: var(--white-color);
   border-radius: 0.8rem;
@@ -290,6 +371,15 @@ h2 {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
+.email-submit-box .thank-you {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: var(--light-black-color);
+  margin-right: auto;
+  display: none;
+}
+
 .email-submit-box .email-input {
   flex-grow: 1;
   border: 1px solid #e2e8f0;
@@ -347,35 +437,3 @@ h2 {
   display: none;
 }
 /* Email Submit Box End */
-
-/* Other words Start */
-/* .others-words {
-  background: url(blob-scene-haikei.svg) no-repeat center center;
-  background-size: cover;
-}
-
-.others-words .other-words-content-box {
-  color: var(--white-color);
-  width: 40%;
-  font-size: 1.3rem;
-  line-height: 1.6;
-}
-
-.others-words .other-words-content-box .quote {
-  margin-top: 1.5rem;
-}
-
-.others-words .other-words-content-box .author {
-  margin-top: 1.5rem;
-  line-height: 1.2;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.others-words .other-words-content-box .author img {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-} */
-/* Other words End */
