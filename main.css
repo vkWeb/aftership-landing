@@ -71,7 +71,7 @@ h6 {
 }
 
 html {
-  line-height: 1;
+  line-height: 1.1;
   background-color: var(--white-color);
   font-size: 18px;
   font-family: "Mona Sans", system-ui;
@@ -110,7 +110,7 @@ html {
   padding-bottom: 5rem;
 }
 
-.hero-h1-h2 {
+.hero-h1-h3 {
   width: 70%;
 }
 
@@ -124,25 +124,21 @@ html {
 
 /* When on mobile */
 @media (max-width: 640px) {
-  .hero-h1-h2,
+  .hero-h1-h3,
   .other-words-content-box,
   #hero-email-collection {
     width: 95%;
   }
 }
 
-.hero-h1-h2 h1 {
-  margin-bottom: 1.5rem;
-}
-
-.hero-heading h1,
-.hero-heading h2 {
+.hero-h1-h3 h1,
+.hero-h1-h3 h3 {
   text-align: center;
 }
 
 .other-words-content-box {
-  margin-top: 3.1rem;
-  margin-bottom: 3.1rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
   color: var(--light-black-color);
   font-size: 1rem;
   line-height: 1.4;
@@ -217,6 +213,13 @@ h1 {
 }
 
 h2 {
+  font-family: "Funnel Display", system-ui;
+  font-size: 2.35rem;
+}
+
+h3 {
+  margin-top: 1.2rem;
+  font-size: 1.5rem;
   color: var(--light-black-color);
 }
 
@@ -237,7 +240,7 @@ h2 {
   background-color: #f1f5f9;
 }
 
-.container-of-three-major-pains .h1-h2 {
+.container-of-three-major-pains .h2-h3 {
   text-align: center;
   padding-top: 6rem;
   padding-bottom: 4rem;
@@ -344,7 +347,7 @@ h2 {
 .manifesto .paper > p,
 #manifesto-email-collection,
 .signature {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .manifesto .paper svg {
