@@ -325,14 +325,10 @@ h2 {
   }
 }
 
-.manifesto .paper p,
+.manifesto .paper > p,
 #manifesto-email-collection,
 .signature {
   margin-bottom: 2.5rem;
-}
-
-.manifesto .paper p:last-child {
-  margin-bottom: 0;
 }
 
 .manifesto .paper svg {
