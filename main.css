@@ -80,7 +80,7 @@ html {
 
 @media (max-width: 640px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -101,13 +101,6 @@ html {
 }
 
 /* Utilities END */
-
-main {
-}
-
-.hero-full-width {
-}
-
 .hero-heading {
   display: flex;
   flex-direction: column;
@@ -120,16 +113,25 @@ main {
   width: 70%;
 }
 
-.hero-h1-h2 h1 {
-  margin-bottom: 1.5rem;
-}
-
 #hero-email-collection {
   width: 45%;
 }
 
 .other-words-content-box {
   width: 45%;
+}
+
+/* When on mobile */
+@media (max-width: 640px) {
+  .hero-h1-h2,
+  .other-words-content-box,
+  #hero-email-collection {
+    width: 100%;
+  }
+}
+
+.hero-h1-h2 h1 {
+  margin-bottom: 1.5rem;
 }
 
 .hero-heading h1,
@@ -209,7 +211,7 @@ main {
 
 h1 {
   font-family: "Funnel Display", system-ui;
-  font-size: 3rem;
+  font-size: 2.75rem;
   position: relative;
 }
 
