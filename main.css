@@ -107,6 +107,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .hero-h1-h2 {
@@ -126,7 +127,7 @@ html {
   .hero-h1-h2,
   .other-words-content-box,
   #hero-email-collection {
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -232,9 +233,22 @@ h2 {
 }
 
 /* Styles for pain card */
-
 .container-of-three-major-pains {
-  margin-top: 10rem;
+  background-color: #f1f5f9;
+}
+
+.container-of-three-major-pains .h1-h2 {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.three-major-pains {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .pain-card-container {
