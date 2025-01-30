@@ -115,19 +115,31 @@ html {
   top: -1rem;
   font-size: 0.9rem;
 }
+/* Utilities END */
+
+/* Header */
+
+header {
+  position: relative; /* Set position relative for absolute positioning of background */
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--light-black-color);
+  margin-bottom: 4rem;
+}
 
 h1 {
   position: relative;
   font-family: "Funnel Display", system-ui;
   font-size: 3rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
   line-height: 1;
 }
 
 h2 {
   color: var(--light-black-color);
-  font-size: 1.1rem;
-  margin-bottom: 2.2rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -138,24 +150,43 @@ a {
 a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-}
-/* Utilities END */
-
-/* Header */
-header {
-  position: relative; /* Set position relative for absolute positioning of background */
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid var(--light-black-color);
-  margin-bottom: 4rem;
+  text-underline-offset: 3px;
 }
 
+header p.go-back-to-blog,
+header p.date,
 header p.author {
   color: var(--light-black-color);
   font-weight: 400;
   font-size: 0.9rem;
+}
+
+header p.go-back-to-blog {
+  margin-bottom: 2rem;
+}
+
+header p.date {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p.author {
+  margin-bottom: 1rem;
+}
+
+header p.go-back-to-blog {
+  a {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .icon {
+    width: 1em;
+    height: 1em;
+    color: inherit;
+  }
 }
 
 header p.author img.author-img {
@@ -200,12 +231,12 @@ main ul.articles li.article-entry::before {
 }
 
 main ul.articles li.article-entry {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
+  font-size: 1.3rem;
+  font-weight: 600;
+}
 
 main ul.articles li.article-entry span.date {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   padding-left: 0.6em;
   color: var(--light-black-color);
   vertical-align: center;
@@ -214,6 +245,6 @@ main ul.articles li.article-entry span.date {
 
 /* Main blog content */
 main p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 3.5rem;
 }
