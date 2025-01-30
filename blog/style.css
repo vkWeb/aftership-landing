@@ -109,18 +109,18 @@ html {
   width: fit-content;
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
-  font-weight: 400;
+  font-weight: 600;
   transform: rotate(-2deg);
   position: absolute;
   top: -1rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 h1 {
   position: relative;
   font-family: "Funnel Display", system-ui;
   font-size: 3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
   line-height: 1;
 }
 
@@ -149,12 +149,13 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-bottom: 2px solid var(--light-black-color);
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 header p.author {
   color: var(--light-black-color);
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 header p.author img.author-img {
@@ -208,6 +209,7 @@ main ul.articles li.article-entry span.date {
   padding-left: 0.6em;
   color: var(--light-black-color);
   vertical-align: center;
+  font-weight: 400;
 }
 
 /* Main blog content */
