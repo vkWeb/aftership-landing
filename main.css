@@ -101,6 +101,30 @@ html {
 }
 
 /* Utilities END */
+nav {
+  margin-top: 1rem;
+}
+
+nav ul {
+  max-width: 50%;
+  padding: 1.2rem;
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 4rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 3px -1px rgba(0, 0, 0, 0.2);
+
+  li {
+    font-size: 0.9rem;
+  }
+
+  .logo-img {
+    margin-right: auto;
+  }
+}
+
 .hero-heading {
   display: flex;
   flex-direction: column;
