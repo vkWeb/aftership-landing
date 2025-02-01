@@ -17,107 +17,121 @@
 </head>
 
 <body>
-    <nav class="inside-main-container-area center-container">
-        <ul class="center-container">
-            <li class="logo-img">
-                <img src="ListenUser Logo.svg" alt="Logo">
-            </li>
 
-            <li>Product</li>
-            <li>Pricing</li>
-            <li>
-                <a href="/blog">
-                    Blog
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <div class="full-width-container full-width-head-nav">
+        <nav class="inside-main-container-area center-container">
+            <ul class="center-container logo">
+                <li>
+                    <a href="/">
+                        <img class="logo-img" src="ListenUser Logo.svg" alt="Logo">
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="center-container links">
+                <li>
+                    <a href="/blog">
+                        Product
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog">
+                        Pricing
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <header class="center-container inside-main-container-area hero-heading">
+            <div class="hero-h1-h3">
+                <h1>
+                    For SaaS, customer support and feedback should be one tool.
+                </h1>
+
+                <h3>A reimagined customer support and user feedback platform.</h3>
+            </div>
+
+            <div class="other-words-content-box">
+                <div class="author">
+                    <img src="jason.png" alt="Jason Cohen's image">
+                    <p>
+                        Jason Cohen
+                        <br>
+                        Founder, Smart Bear and WP Engine
+                    </p>
+                </div>
+
+                <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 48" width="64"
+                    height="48">
+                    <path fill="currentColor"
+                        d="M0 24h8v8H0zM8 24h8v8H8zM32 24h8v8h-8zM40 24h8v8h-8zM0 16h8v8H0zM32 16h8v8h-8zM0 32h8v8H0zM8 32h8v8H8zM32 32h8v8h-8zM40 32h8v8h-8zM8 16h8v8H8zM40 16h8v8h-8zM8 8h8v8H8zM40 8h8v8h-8zM16 0h8v8h-8zM48 0h8v8h-8zM8 40h8v8H8zM16 40h8v8h-8zM0 40h8v8H0zM40 40h8v8h-8zM48 40h8v8h-8zM32 40h8v8h-8zM16 24h8v8h-8zM48 24h8v8h-8zM16 32h8v8h-8zM48 32h8v8h-8z">
+                    </path>
+                </svg>
+
+                <p class="quote">
+                    Tech support is the closest, most honest chance for product development
+                    [...] Here's where
+                    real users discover and report on your
+                    product. Are you listening, or just throwing it away?
+                </p>
+
+                <p class="quote-source">
+                    <a href="https://longform.asmartbear.com/tech-support-is-sales/" target="_blank">
+                        <span>Tech support is sales</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="out-link-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </p>
+            </div>
+
+            <div id="hero-email-collection" class="email-collection-container">
+                <form method="POST" data-netlify="true" name="early-access-form" class="email-submit-box">
+                    <input required type="email" placeholder="Email" class="email-input" name="email-address" />
+
+                    <p class="thank-you">
+                        Thank you so much for being part of our early access.
+                        <br>
+                        I will write an email to you at the soonest! 💛
+                        <br><br>
+                        — Vivek (founder, AfterShip.io)
+                    </p>
+
+                    <button class="email-button" type="submit">
+                        <span class="btn-text">Early access</span>
+
+                        <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                        </svg>
+
+                        <svg class="in-progress-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                        </svg>
+
+                        <svg class="done-success-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </header>
+    </div>
 
     <main>
-        <div class="full-width-container">
-            <section class="center-container inside-main-container-area hero-heading">
-                <div class="hero-h1-h3">
-                    <h1>
-                        For SaaS, customer support and feedback should be one tool.
-                    </h1>
-
-                    <h3>A reimagined customer support and user feedback platform.</h3>
-                </div>
-
-                <div class="other-words-content-box">
-                    <div class="author">
-                        <img src="jason.png" alt="Jason Cohen's image">
-                        <p>
-                            Jason Cohen
-                            <br>
-                            Founder, Smart Bear and WP Engine
-                        </p>
-                    </div>
-
-                    <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 48"
-                        width="64" height="48">
-                        <path fill="currentColor"
-                            d="M0 24h8v8H0zM8 24h8v8H8zM32 24h8v8h-8zM40 24h8v8h-8zM0 16h8v8H0zM32 16h8v8h-8zM0 32h8v8H0zM8 32h8v8H8zM32 32h8v8h-8zM40 32h8v8h-8zM8 16h8v8H8zM40 16h8v8h-8zM8 8h8v8H8zM40 8h8v8h-8zM16 0h8v8h-8zM48 0h8v8h-8zM8 40h8v8H8zM16 40h8v8h-8zM0 40h8v8H0zM40 40h8v8h-8zM48 40h8v8h-8zM32 40h8v8h-8zM16 24h8v8h-8zM48 24h8v8h-8zM16 32h8v8h-8zM48 32h8v8h-8z">
-                        </path>
-                    </svg>
-
-                    <p class="quote">
-                        Tech support is the closest, most honest chance for product development
-                        [...] Here's where
-                        real users discover and report on your
-                        product. Are you listening, or just throwing it away?
-                    </p>
-
-                    <p class="quote-source">
-                        <a href="https://longform.asmartbear.com/tech-support-is-sales/" target="_blank">
-                            <span>Tech support is sales</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="out-link-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                            </svg>
-                        </a>
-                    </p>
-                </div>
-
-                <div id="hero-email-collection" class="email-collection-container">
-                    <form method="POST" data-netlify="true" name="early-access-form" class="email-submit-box">
-                        <input required type="email" placeholder="Email" class="email-input" name="email-address" />
-
-                        <p class="thank-you">
-                            Thank you so much for being part of our early access.
-                            <br>
-                            I will write an email to you at the soonest! 💛
-                            <br><br>
-                            — Vivek (founder, AfterShip.io)
-                        </p>
-
-                        <button class="email-button" type="submit">
-                            <span class="btn-text">Early access</span>
-
-                            <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
-                            </svg>
-
-                            <svg class="in-progress-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                            </svg>
-
-                            <svg class="done-success-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </section>
-        </div>
-
         <section class="container-of-three-major-pains full-width-container">
             <div class="h2-h3">
                 <h2>Three pains, one tool</h2>
