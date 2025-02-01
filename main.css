@@ -110,8 +110,8 @@ a:hover {
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-
 /* Utilities END */
+
 nav {
   padding-top: 0.5rem;
   display: flex;
@@ -153,12 +153,12 @@ nav ul.links {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .hero-h1-h3 {
-  width: 70%;
+  width: 80%;
 }
 
 #hero-email-collection {
@@ -255,18 +255,19 @@ nav ul.links {
 
 h1 {
   font-family: "Funnel Display", system-ui;
-  font-size: 2.75rem;
+  font-size: 2.45rem;
   position: relative;
+  line-height: 1;
 }
 
 h2 {
   font-family: "Funnel Display", system-ui;
-  font-size: 2.35rem;
+  font-size: 2.15rem;
 }
 
 h3 {
-  margin-top: 1.2rem;
-  font-size: 1.5rem;
+  margin-top: 1.6rem;
+  font-size: 1.3rem;
   color: var(--light-black-color);
 }
 
@@ -329,7 +330,7 @@ h3 {
 }
 
 .pain-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -356,7 +357,7 @@ h3 {
 
 .pain-description {
   line-height: 1.3;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   margin-top: 1rem;
 }
@@ -386,7 +387,6 @@ h3 {
 @media (min-width: 640px) {
   .manifesto .paper {
     max-width: 60%;
-    font-size: 1.3rem;
     padding: 3.3rem;
   }
 }
@@ -394,7 +394,7 @@ h3 {
 .manifesto .paper > p,
 #manifesto-email-collection,
 .signature {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .manifesto .paper svg {
