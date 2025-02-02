@@ -273,14 +273,14 @@ h3 {
 
 .chip {
   background-color: var(--yellow-color);
+  color: var(--black-color);
   width: fit-content;
-  padding: 0.1rem 0.6rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 4px;
-  font-weight: 400;
-  transform: rotate(-6deg);
+  font-weight: 500;
   position: absolute;
-  top: -1.4rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  transform: rotate(-5deg);
 }
 
 /* Styles for pain card */
@@ -295,71 +295,90 @@ h3 {
 }
 
 .three-major-pains {
-  max-width: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-}
 
-.pain-card-container {
-  color: var(--white-color);
-  border-radius: 0.8rem;
-  padding: 1.4rem 1.2rem;
-  border: 0.6rem solid;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 3px -1px rgba(0, 0, 0, 0.2);
-}
+  .three-pain-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4.5rem;
 
-.pain-card-container.feature {
-  background-color: #0090ff;
-  border-color: #8ec8f6;
-  transform: rotate(2deg);
-}
+    .pain-card-container {
+      flex-basis: 20rem;
+      color: var(--white-color);
+      border-radius: 0.8rem;
+      padding: 1rem 0.8rem;
+      border: 0.3rem solid;
 
-.pain-card-container.bug {
-  background-color: #ff5100e0;
-  border-color: #f69a73;
-  transform: rotate(-1deg);
-}
+      .pain-title {
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
 
-.pain-card-container.support {
-  background-color: #46a758;
-  border-color: #b2ddb5;
-  transform: rotate(4deg);
-}
+      .hand-drawn {
+        color: inherit;
+        width: 2em;
+        height: 2em;
+      }
 
-.pain-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-}
+      .hand-drawn.feature {
+        transform: rotate(5deg);
+      }
 
-.hand-drawn {
-  color: inherit;
-  width: 2.2em;
-  height: 2.2em;
-}
+      .hand-drawn.bug {
+        transform: rotate(-3deg);
+      }
 
-.hand-drawn.feature {
-  transform: rotate(5deg);
-}
+      .hand-drawn.support {
+        transform: rotate(3deg);
+      }
 
-.hand-drawn.bug {
-  transform: rotate(-3deg);
-}
+      .pain-description {
+        line-height: 1.3;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        margin-top: 0.7rem;
+      }
+    }
 
-.hand-drawn.support {
-  transform: rotate(3deg);
-}
+    .pain-card-container.feature {
+      background-color: #0090ff;
+      border-color: #8ec8f6;
+      transform: rotate(2deg);
+    }
 
-.pain-description {
-  line-height: 1.3;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 1rem;
+    .pain-card-container.bug {
+      background-color: #ff5100e0;
+      border-color: #f69a73;
+      transform: rotate(-1deg);
+    }
+
+    .pain-card-container.support {
+      background-color: #46a758;
+      border-color: #b2ddb5;
+      transform: rotate(4deg);
+    }
+  }
+
+  .product-shot-container {
+    position: relative;
+
+    .chip {
+      top: -0.3rem;
+      left: -0.4rem;
+    }
+
+    img.product-shot {
+        width: 28rem;
+        height: auto;
+    }
+  }
 }
 
 /* Manifesto */
