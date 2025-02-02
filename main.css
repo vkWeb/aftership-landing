@@ -285,86 +285,26 @@ h3 {
 
 /* Styles for pain card */
 .container-of-three-major-pains {
-  background-color: #f1f5f9;
-}
+  svg.section-separator {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    width: 15rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.container-of-three-major-pains .h2-h3 {
-  text-align: center;
-  padding-top: 6rem;
-  padding-bottom: 4rem;
+  h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 }
 
 .three-major-pains {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  .three-pain-cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 4.5rem;
-
-    .pain-card-container {
-      flex-basis: 20rem;
-      color: var(--white-color);
-      border-radius: 0.8rem;
-      padding: 1rem 0.8rem;
-      border: 0.3rem solid;
-
-      .pain-title {
-        font-size: 1rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 0.7rem;
-      }
-
-      .hand-drawn {
-        color: inherit;
-        width: 2em;
-        height: 2em;
-      }
-
-      .hand-drawn.feature {
-        transform: rotate(5deg);
-      }
-
-      .hand-drawn.bug {
-        transform: rotate(-3deg);
-      }
-
-      .hand-drawn.support {
-        transform: rotate(3deg);
-      }
-
-      .pain-description {
-        line-height: 1.3;
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        margin-top: 0.7rem;
-      }
-    }
-
-    .pain-card-container.feature {
-      background-color: #0090ff;
-      border-color: #8ec8f6;
-      transform: rotate(2deg);
-    }
-
-    .pain-card-container.bug {
-      background-color: #ff5100e0;
-      border-color: #f69a73;
-      transform: rotate(-1deg);
-    }
-
-    .pain-card-container.support {
-      background-color: #46a758;
-      border-color: #b2ddb5;
-      transform: rotate(4deg);
-    }
-  }
+  gap: 4rem;
 
   .product-shot-container {
     position: relative;
@@ -375,8 +315,56 @@ h3 {
     }
 
     img.product-shot {
-        width: 28rem;
+      max-width: 20rem;
+      height: auto;
+    }
+  }
+
+  .three-pain-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .pain-card-container {
+      flex-basis: 25rem;
+      padding: 1.5rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+
+      p {
+        line-height: 1.3;
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .heading {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .content svg {
+        width: 3rem;
         height: auto;
+      }
+    }
+
+    .pain-card-container.before {
+      color: #838383;
+    }
+
+    .pain-card-container.after img.logo-img {
+      width: 7rem;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
