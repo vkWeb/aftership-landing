@@ -55,16 +55,25 @@ function handleSubmit(formDOMLocation) {
 
 // Add event listener
 document.addEventListener("DOMContentLoaded", function () {
-  document
-    .querySelector("#hero-email-collection .email-submit-box")
-    .addEventListener(
+  const heroEmailCollection = document.querySelector(
+    "#hero-email-collection .email-submit-box"
+  );
+
+  const manifestoEmailCollection = document.querySelector(
+    "#manifesto-email-collection .email-submit-box"
+  );
+
+  if (heroEmailCollection) {
+    heroEmailCollection.addEventListener(
       "submit",
       handleSubmit("#hero-email-collection .email-submit-box")
     );
-  document
-    .querySelector("#manifesto-email-collection .email-submit-box")
-    .addEventListener(
+  }
+
+  if (manifestoEmailCollection) {
+    manifestoEmailCollection.addEventListener(
       "submit",
       handleSubmit("#manifesto-email-collection .email-submit-box")
     );
+  }
 });
