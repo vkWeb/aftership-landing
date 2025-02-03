@@ -163,6 +163,27 @@ nav ul.links {
 
 #hero-email-collection {
   width: 45%;
+  .email-submit-box {
+    background: var(--white-color);
+    padding: 1rem;
+    border-radius: 5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .email-input {
+    padding: 0.6rem 0;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .email-button {
+    margin-right: 1rem;
+  }
 }
 
 .other-words-content-box {
@@ -328,7 +349,7 @@ h3 {
     flex-wrap: wrap;
 
     .pain-card-container {
-      flex-basis: 25rem;
+      flex-basis: 30rem;
       padding: 3rem 1rem;
       border: 1px solid #e0e0e0;
       border-radius: 0.5rem;
