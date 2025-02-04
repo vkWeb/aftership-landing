@@ -72,7 +72,7 @@ h6 {
 }
 
 html {
-  line-height: 1.1;
+  line-height: 1.3;
   background-color: var(--white-color);
   font-size: 18px;
   font-family: "Mona Sans", system-ui;
@@ -279,19 +279,19 @@ nav ul.links {
 
 h1 {
   font-family: "Funnel Display", system-ui;
-  font-size: 2.45rem;
+  font-size: 3.2rem;
   position: relative;
   line-height: 1;
 }
 
 h2 {
   font-family: "Funnel Display", system-ui;
-  font-size: 2.15rem;
+  font-size: 2.2rem;
 }
 
 h3 {
+  font-size: 1.2rem;
   margin-top: 1.6rem;
-  font-size: 1.3rem;
   color: var(--light-black-color);
 }
 
@@ -318,6 +318,12 @@ svg.section-separator {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h2,
+  h3 {
+    max-width: 60rem;
+    width: 100%;
+  }
 
   h2 {
     text-align: center;
