@@ -214,7 +214,7 @@ header p.author img.author-img {
 /* Main articles page */
 main {
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
   border-top: 2px solid var(--light-black-color);
   justify-self: center;
 }
