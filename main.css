@@ -63,6 +63,7 @@ h6 {
 /* Reset End */
 
 /* Our styles */
+
 :root {
   --black-color: #111828;
   --yellow-color: #f8ca1e;
@@ -173,7 +174,8 @@ nav ul.links {
   }
 
   .email-input {
-    padding: 0.6rem 0;
+    outline: none;
+    padding: 0.3rem 0.05rem;
     margin-left: 1.5rem;
     font-size: 1rem;
     border-radius: 0;
@@ -245,6 +247,7 @@ nav ul.links {
 }
 
 .other-words-content-box .quote-source a {
+  max-width: fit-content;
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -295,30 +298,37 @@ h3 {
 .chip {
   background-color: var(--yellow-color);
   color: var(--black-color);
-  width: fit-content;
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
   font-weight: 500;
-  position: absolute;
   font-size: 0.75rem;
-  transform: rotate(-5deg);
 }
 
-/* Styles for pain card */
-.container-of-three-major-pains {
-  svg.section-separator {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    width: 15rem;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
+/* Main area starts */
+svg.section-separator {
+  margin-top: 5.5rem;
+  margin-bottom: 5.5rem;
+  width: 15rem;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  h2 {
-    text-align: center;
-    margin-bottom: 4rem;
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
   }
+}
+
+img.product-shot {
+  max-width: 50rem; /* Prevent it from getting too big on large screens */
+  width: 100%; /* Allow it to shrink to fit small screens */
+  height: auto;
 }
 
 .three-major-pains {
@@ -326,20 +336,6 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
-
-  .product-shot-container {
-    position: relative;
-
-    .chip {
-      top: -0.3rem;
-      left: -0.4rem;
-    }
-
-    img.product-shot {
-      max-width: 20rem;
-      height: auto;
-    }
-  }
 
   .three-pain-cards {
     display: flex;
@@ -394,6 +390,49 @@ h3 {
   }
 }
 
+/* Build in public section START */
+.building-in-public-container {
+  .building-in-public-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  a.build-in-public-link {
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  a.build-in-public-link:hover .out-link-icon {
+    transform: translateY(-0.1rem) translateX(0.1rem);
+  }
+
+  a.build-in-public-link .out-link-icon {
+    width: 0.8em;
+    height: 0.8em;
+    transition: transform 0.1s ease-in;
+  }
+
+  .loom-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* Limit max width on larger screens */
+    aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
+  }
+
+  .loom-video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+/* Build in public section END */
+
 /* Manifesto */
 .manifesto {
   background-color: #f1f5f9;
@@ -402,9 +441,7 @@ h3 {
 }
 
 .manifesto .section-heading {
-  text-align: center;
   padding-top: 6rem;
-  padding-bottom: 4rem;
 }
 
 .manifesto .paper {
