@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheets start -->
+    <link rel="stylesheet" href="/blog/blog.css">
+    <link rel="stylesheet" href="/email-box.css">
+    <!-- Stylesheets end -->
+
+    <!-- Script for email subscribe start -->
+    <script src="/email-subscribe.js"></script>
+    <!-- Script for email subscribe end -->
+
+    <title>ListenUser Blog: Log #4</title>
+
+    <!-- Favicons START -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <!-- Favicons END -->
+
+    <!-- Posthog start -->
+    <script>
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        posthog.init('phc_kznOAnLt9D63dpCYQWzQNFteDyR6OWh79rXlegVbiaB', {
+            api_host: 'https://us.i.posthog.com',
+            person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+        })
+    </script>
+    <!-- Posthog end -->
+</head>
+
+<body class="inside-main-container-area center-container inside-grid">
+    <header>
+        <div class="header-background"></div>
+        <!-- Go back to blog link -->
+        <p class="go-back-to-blog">
+            <a href="/blog">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+
+                <span>
+                    Go back to Blog
+                </span>
+            </a>
+        </p>
+
+        <!-- Blog title -->
+        <h1>
+            Building in Public: Log #4
+        </h1>
+
+        <!-- Date -->
+        <p class="date">
+            1 March 2025
+        </p>
+
+        <!-- author details -->
+        <p class="author">
+            <span>
+                Written by
+            </span>
+
+            <img class="author-img" src="/vk-nice.png" alt="Vivek Agrawal's photo">
+
+            <a class="author-link" href="https://x.com/vkwebdev" target="_blank">Vivek (Founder, ListenUser)</a>
+        </p>
+
+
+    </header>
+
+    <!-- main article content -->
+    <main>
+        <p>Building in Public Log #4. Welcome, dear friend.</p>
+
+        <p>Every week I share an update on my journey of building <a href="https://ListenUser.com" target="_blank">ListenUser</a> -- a customer support tool for SaaS companies.</p>
+
+        <p>This week I didn't get a lot done because I had to go to a relative's wedding and also had a huge fight with my partner. Don't worry, things are cool now and I am back on track 💪</p>
+
+        <p>This week I made the email forwarding and reply functionality. This will allow our customers to set up a forwarding rule on their support inbox, the emails will get forwarded to ListenUser and they will be able to reply, assign their team members from within ListenUser itself.</p>
+
+        <p>Here's a quick video (play at 1.5x) of me showing the functionality.</p>
+
+        <div style="position: relative; padding-bottom: 56.09492988133764%; height: 0;"><iframe src="https://www.loom.com/embed/5822145dc6a0458a8fa65ecabdafc6cc?sid=37b8dfd6-301e-4642-b01d-9bc5c679f04e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        
+
+        <div id="manifesto-email-collection" class="email-collection-container">
+            <form method="POST" data-netlify="true" name="early-access-form" class="email-submit-box">
+                <input required type="email" placeholder="Email" class="email-input" name="email-address" />
+
+                <p class="thank-you">
+                    Thank you so much for being part of our journey.
+                    <br>
+                    I will write an email to you at the soonest! 💛
+                    <br><br>
+                    — Vivek (Founder, ListenUser.com)
+                </p>
+
+                <button class="email-button" type="submit">
+                    <span class="btn-text">Subscribe</span>
+
+                    <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                    </svg>
+
+                    <svg class="in-progress-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+
+                    <svg class="done-success-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p class="head-to-listenuser">
+            <a href="/" target="_blank">
+                <span>
+                    Head over to ListenUser.com
+                </span>
+
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+
+            </a>
+        </p>
+    </footer>
+</body>
+
+</html>

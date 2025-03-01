@@ -245,11 +245,11 @@ main ul.articles li.article-entry span.date {
 
 /* Main blog content */
 main {
-  p,
-  figure,
-  video,
-  hr,
-  .email-collection-container {
+  > p,
+  > figure,
+  > video,
+  > hr,
+  > div {
     margin-bottom: 2.5rem;
   }
 
