@@ -2,7 +2,9 @@
 function handleSubmit(formDOMLocation) {
   return function (event) {
     event.preventDefault();
-
+    
+    console.log();
+    
     const myForm = event.target;
     const formData = new FormData(myForm);
 
