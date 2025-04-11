@@ -1,3 +1,3 @@
 # aftership-landing
 yup yup
-hello hello
+hello
