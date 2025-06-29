@@ -7,12 +7,10 @@
 
     <!-- Stylesheets Start -->
     <link href="/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/email-box.css">
-    <!-- Stylesheets end -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Stylesheets End -->
 
-    <!-- Script for email subscribe start -->
-    <script src="/email-subscribe.js"></script>
-    <!-- Script for email subscribe end -->
 
     <!-- Favicons START -->
     <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
@@ -21,470 +19,164 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
     <!-- Favicons END -->
 
-    <title>ListenUser: support and feedback for SaaS</title>
-
-    <!-- Posthog start -->
-    <script>
-        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
-        posthog.init('phc_kznOAnLt9D63dpCYQWzQNFteDyR6OWh79rXlegVbiaB', {
-            api_host: 'https://us.i.posthog.com',
-            person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
-        })
-    </script>
-    <!-- Posthog end -->
+    <title>ListenUser: customer support & feedback tool for SaaS</title>
 </head>
 
 <body>
-    <div class="full-width-container full-width-head-nav">
-        <nav class="inside-main-container-area center-container">
-            <ul class="center-container logo">
-                <li>
-                    <a href="/">
-                        <img class="logo-img" src="ListenUser Logo.svg" alt="Logo">
-                    </a>
-                </li>
-            </ul>
+    <!-- Header Navigation -->
+    <header>
+        <a href="/" class="logo">
+            <img src="/ListenUser Logo.svg" alt="ListenUser Logo">
+        </a>
 
-            <ul class="center-container links">
-                <li>
-                    <a href="/blog/early-and-journey-access" target="_blank">
-                        Join early access
-                    </a>
-                </li>
-                <li>
-                    <a href="/blog" target="_blank">
-                        Blog
-                    </a>
-                </li>
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#get-started">Get Started</a></li>
             </ul>
         </nav>
 
+        <!-- Empty grid cell keeps nav centred -->
+        <div class="spacer"></div>
+    </header>
 
-        <header class="center-container inside-main-container-area hero-heading">
-            <div class="hero-h1-h3">
-                <h1>
-                    Customer support and user feedback in one tool.
-                </h1>
-
-                <h3>A reimagined customer support and user feedback platform for SaaS companies.</h3>
-            </div>
-
-            <div class="other-words-content-box">
-                <div class="author">
-                    <img src="jason.png" alt="Jason Cohen's image">
-                    <p>
-                        Jason Cohen
-                        <br>
-                        Founder, Smart Bear and WP Engine
-                    </p>
-                </div>
-
-                <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 48" width="64"
-                    height="48">
-                    <path fill="currentColor"
-                        d="M0 24h8v8H0zM8 24h8v8H8zM32 24h8v8h-8zM40 24h8v8h-8zM0 16h8v8H0zM32 16h8v8h-8zM0 32h8v8H0zM8 32h8v8H8zM32 32h8v8h-8zM40 32h8v8h-8zM8 16h8v8H8zM40 16h8v8h-8zM8 8h8v8H8zM40 8h8v8h-8zM16 0h8v8h-8zM48 0h8v8h-8zM8 40h8v8H8zM16 40h8v8h-8zM0 40h8v8H0zM40 40h8v8h-8zM48 40h8v8h-8zM32 40h8v8h-8zM16 24h8v8h-8zM48 24h8v8h-8zM16 32h8v8h-8zM48 32h8v8h-8z">
-                    </path>
-                </svg>
-
-                <p class="quote">
-                    Tech support is the closest, most honest chance for product development
-                    [...] Here's where
-                    real users discover and report on your
-                    product. Are you listening, or just throwing it away?
-                </p>
-
-                <p class="quote-source">
-                    <a href="https://longform.asmartbear.com/tech-support-is-sales/" target="_blank">
-                        <span>Tech support is sales</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="out-link-icon">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                        </svg>
-                    </a>
-                </p>
-            </div>
-
-            <div id="hero-email-collection" class="email-collection-container">
-                <form method="POST" data-netlify="true" name="early-access-form" class="email-submit-box">
-                    <input required type="email" placeholder="Email" class="email-input" name="email-address" />
-
-                    <p class="thank-you">
-                        Thank you so much for being part of our early access.
-                        <br>
-                        I will write an email to you at the soonest! 💛
-                        <br><br>
-                        — Vivek (Founder, ListenUser.com)
-                    </p>
-
-                    <button class="email-button" type="submit">
-                        <span class="btn-text">Early access</span>
-
-                        <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="2" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
-                        </svg>
-
-                        <svg class="in-progress-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="2" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                        </svg>
-
-                        <svg class="done-success-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </header>
-    </div>
-
+    <!-- Hero Section -->
     <main>
-        <section class="section-container inside-main-container-area center-container">
+        <section class="hero">
+            <h1>
+                Customer support and user feedback for modern software companies
+            </h1>
 
-            <svg class="section-separator" viewBox="0 0 36 312" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M26.259 308.716C25.5521 306.595 22.4695 304.994 20.7754 303.83C16.9976 301.234 13.351 298.501 9.86233 295.523C9.06792 294.845 4.21578 291.585 4.21578 290.365C4.21578 289.987 10.6589 290.053 10.9482 290.039C15.8852 289.801 20.9337 289.814 25.8247 289.062C27.642 288.782 31.5413 288.84 29.2452 286.51C26.2606 283.482 22.7421 280.949 19.6352 278.04C16.1692 274.795 12.9128 271.412 9.2108 268.43C7.13382 266.757 6.92485 265.933 9.75374 265.254C13.3675 264.387 17.1892 263.678 20.8568 263.082C22.0173 262.894 27.4727 262.985 28.105 261.562C28.4983 260.677 20.6419 255.764 20.0695 255.345C15.2141 251.797 10.7862 247.771 6.44183 243.618C5.48641 242.705 1.24189 239.612 4.21578 239.22C8.42765 238.666 12.6784 238.206 16.9205 237.971C19.4094 237.834 21.9011 237.806 24.3859 237.591C25.604 237.486 28.5461 237.596 29.6524 236.858C30.2563 236.456 28.5005 235.972 27.8878 235.583C26.106 234.45 24.321 233.323 22.5399 232.189C18.6314 229.702 14.7842 226.948 11.6812 223.475C11.1457 222.876 8.04841 220.005 8.26066 219.05C8.6341 217.37 15.298 216.106 16.5947 215.657C17.6481 215.292 25.9372 213.426 26.0419 212.345C26.2095 210.612 19.3273 206.742 18.2236 205.884C13.7695 202.42 9.32041 198.887 5.30166 194.917C3.26454 192.904 3.95133 193.119 6.2518 192.555C11.3203 191.312 16.188 189.453 21.2912 188.293C21.8921 188.156 29.6974 186.965 28.105 185.904C23.9719 183.148 19.5759 180.862 15.5089 177.977C12.9344 176.151 7.4618 173.323 6.33324 170.05C5.94956 168.937 24.5728 163.967 26.5305 163.209C30.2882 161.754 31.2269 161.44 27.6707 158.866C21.528 154.419 14.7327 150.952 8.88504 146.079C6.52226 144.11 4.03004 142.271 7.63629 140.786C11.7514 139.091 16.038 137.753 20.3139 136.524C20.7778 136.39 26.8265 135.34 26.5848 134.433C25.9498 132.052 21.023 130.216 19.2008 129.113C16.8335 127.679 13.5573 125.725 12.2513 123.113C11.5892 121.789 18.2742 120.092 19.0108 119.856C23.3007 118.477 27.5365 117.128 31.6613 115.295C35.0733 113.778 29.2692 112.345 27.5078 111.304C25.9608 110.39 6.32102 98.8727 8.01634 96.7536C9.70953 94.6371 26.6252 91.2879 26.4491 89.9668C26.3487 89.2141 24.1371 87.9649 23.7072 87.6322C21.6871 86.0688 19.6887 84.4798 17.6535 82.9358C14.3728 80.447 11.3056 77.1378 7.79917 75.0089C6.15339 74.0097 6.96106 73.5949 8.66787 72.9186C14.2871 70.6921 20.6329 69.2983 26.5305 68.0322C26.8877 67.9555 33.8504 66.9987 31.9599 65.6432C28.935 63.4744 25.5172 62.1018 22.5671 59.7252C20.6909 58.2139 18.3067 56.7607 16.8119 54.8388C15.6313 53.3208 19.5888 52.7322 20.4225 52.3956C23.1748 51.284 25.9939 50.5079 28.7837 49.518C31.1743 48.6698 28.2892 47.1728 27.2363 46.3961C23.0865 43.3348 18.8188 40.4223 14.6945 37.3291C14.0481 36.8443 10.4893 34.3195 10.6224 33.1213C10.7422 32.0433 15.6057 30.7084 16.3776 30.4066C19.9194 29.0218 23.5862 27.849 27.182 26.6061C29.6123 25.766 27.5668 25.3848 25.9333 24.5972C21.3836 22.4036 17.6533 19.5762 13.9615 16.1545C13.7807 15.9869 11.226 13.8458 11.8169 13.3041C13.8947 11.3994 18.4913 10.7677 21.0468 9.6393C21.3791 9.4926 26.6361 7.14635 25.6889 6.43596C24.1794 5.30378 22.7805 4.07692 21.3726 2.82542"
-                    stroke="url(#paint0_linear_0_1)" stroke-width="5" stroke-linecap="round" />
-                <defs>
-                    <linearGradient id="paint0_linear_0_1" x1="17.9454" y1="308.716" x2="17.9454" y2="2.82542"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0090FF" stop-opacity="0.5" />
-                        <stop offset="1" stop-color="#0090FF" />
-                    </linearGradient>
-                </defs>
-            </svg>
+            <p>
+                Provide support to your customers via in-app widget & email inbox. And listen to their feedback with a
+                purpose-made tool.
+            </p>
 
-            <h2>Keep all user queries and feedback in one place</h2>
-
-            <h3>Don't juggle with bloated integrations. Use one neat tool to tackle support requests, bug reports and
-                feature suggestions from your customers.</h3>
-
-            <img class="product-shot" src="Product-Shot.png" alt="ListenUser.com widget screenshot">
-        </section>
-
-        <section class="inside-main-container-area center-container section-container building-in-public-container">
-
-
-            <svg class="section-separator" viewBox="0 0 36 312" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M26.259 308.716C25.5521 306.595 22.4695 304.994 20.7754 303.83C16.9976 301.234 13.351 298.501 9.86233 295.523C9.06792 294.845 4.21578 291.585 4.21578 290.365C4.21578 289.987 10.6589 290.053 10.9482 290.039C15.8852 289.801 20.9337 289.814 25.8247 289.062C27.642 288.782 31.5413 288.84 29.2452 286.51C26.2606 283.482 22.7421 280.949 19.6352 278.04C16.1692 274.795 12.9128 271.412 9.2108 268.43C7.13382 266.757 6.92485 265.933 9.75374 265.254C13.3675 264.387 17.1892 263.678 20.8568 263.082C22.0173 262.894 27.4727 262.985 28.105 261.562C28.4983 260.677 20.6419 255.764 20.0695 255.345C15.2141 251.797 10.7862 247.771 6.44183 243.618C5.48641 242.705 1.24189 239.612 4.21578 239.22C8.42765 238.666 12.6784 238.206 16.9205 237.971C19.4094 237.834 21.9011 237.806 24.3859 237.591C25.604 237.486 28.5461 237.596 29.6524 236.858C30.2563 236.456 28.5005 235.972 27.8878 235.583C26.106 234.45 24.321 233.323 22.5399 232.189C18.6314 229.702 14.7842 226.948 11.6812 223.475C11.1457 222.876 8.04841 220.005 8.26066 219.05C8.6341 217.37 15.298 216.106 16.5947 215.657C17.6481 215.292 25.9372 213.426 26.0419 212.345C26.2095 210.612 19.3273 206.742 18.2236 205.884C13.7695 202.42 9.32041 198.887 5.30166 194.917C3.26454 192.904 3.95133 193.119 6.2518 192.555C11.3203 191.312 16.188 189.453 21.2912 188.293C21.8921 188.156 29.6974 186.965 28.105 185.904C23.9719 183.148 19.5759 180.862 15.5089 177.977C12.9344 176.151 7.4618 173.323 6.33324 170.05C5.94956 168.937 24.5728 163.967 26.5305 163.209C30.2882 161.754 31.2269 161.44 27.6707 158.866C21.528 154.419 14.7327 150.952 8.88504 146.079C6.52226 144.11 4.03004 142.271 7.63629 140.786C11.7514 139.091 16.038 137.753 20.3139 136.524C20.7778 136.39 26.8265 135.34 26.5848 134.433C25.9498 132.052 21.023 130.216 19.2008 129.113C16.8335 127.679 13.5573 125.725 12.2513 123.113C11.5892 121.789 18.2742 120.092 19.0108 119.856C23.3007 118.477 27.5365 117.128 31.6613 115.295C35.0733 113.778 29.2692 112.345 27.5078 111.304C25.9608 110.39 6.32102 98.8727 8.01634 96.7536C9.70953 94.6371 26.6252 91.2879 26.4491 89.9668C26.3487 89.2141 24.1371 87.9649 23.7072 87.6322C21.6871 86.0688 19.6887 84.4798 17.6535 82.9358C14.3728 80.447 11.3056 77.1378 7.79917 75.0089C6.15339 74.0097 6.96106 73.5949 8.66787 72.9186C14.2871 70.6921 20.6329 69.2983 26.5305 68.0322C26.8877 67.9555 33.8504 66.9987 31.9599 65.6432C28.935 63.4744 25.5172 62.1018 22.5671 59.7252C20.6909 58.2139 18.3067 56.7607 16.8119 54.8388C15.6313 53.3208 19.5888 52.7322 20.4225 52.3956C23.1748 51.284 25.9939 50.5079 28.7837 49.518C31.1743 48.6698 28.2892 47.1728 27.2363 46.3961C23.0865 43.3348 18.8188 40.4223 14.6945 37.3291C14.0481 36.8443 10.4893 34.3195 10.6224 33.1213C10.7422 32.0433 15.6057 30.7084 16.3776 30.4066C19.9194 29.0218 23.5862 27.849 27.182 26.6061C29.6123 25.766 27.5668 25.3848 25.9333 24.5972C21.3836 22.4036 17.6533 19.5762 13.9615 16.1545C13.7807 15.9869 11.226 13.8458 11.8169 13.3041C13.8947 11.3994 18.4913 10.7677 21.0468 9.6393C21.3791 9.4926 26.6361 7.14635 25.6889 6.43596C24.1794 5.30378 22.7805 4.07692 21.3726 2.82542"
-                    stroke="url(#paint0_linear_0_2)" stroke-width="5" stroke-linecap="round" />
-                <defs>
-                    <linearGradient id="paint0_linear_0_2" x1="17.9454" y1="308.716" x2="17.9454" y2="2.82542"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F7CA1E" stop-opacity="0.5" />
-                        <stop offset="1" stop-color="#F7CA1E" />
-                    </linearGradient>
-                </defs>
-            </svg>
-
-            <p class="building-in-public-icon">🚧</p>
-
-            <a class="build-in-public-link chip" href="/blog/build-in-public-01/" target="_blank">
-                <span>
-                    Build in Public: Log #1
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5"
-                    stroke="currentColor" class="out-link-icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg>
-            </a>
-
-            <h2>
-                We are building in public
-            </h2>
-
-            <h3>
-                We share weekly updates about our progress. And we listen to our community and potential users'
-                feedback.
-            </h3>
-
-            <div class="loom-video-container">
-                <iframe
-                    src="https://www.loom.com/embed/0737fb4dd51241ec8b1da1416af08392?sid=f5446027-7b1f-4d82-a93a-2053be225074"
-                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-        </section>
-
-
-        <section class="section-container inside-main-container-area center-container">
-
-            <svg class="section-separator" viewBox="0 0 36 312" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M26.259 308.716C25.5521 306.595 22.4695 304.994 20.7754 303.83C16.9976 301.234 13.351 298.501 9.86233 295.523C9.06792 294.845 4.21578 291.585 4.21578 290.365C4.21578 289.987 10.6589 290.053 10.9482 290.039C15.8852 289.801 20.9337 289.814 25.8247 289.062C27.642 288.782 31.5413 288.84 29.2452 286.51C26.2606 283.482 22.7421 280.949 19.6352 278.04C16.1692 274.795 12.9128 271.412 9.2108 268.43C7.13382 266.757 6.92485 265.933 9.75374 265.254C13.3675 264.387 17.1892 263.678 20.8568 263.082C22.0173 262.894 27.4727 262.985 28.105 261.562C28.4983 260.677 20.6419 255.764 20.0695 255.345C15.2141 251.797 10.7862 247.771 6.44183 243.618C5.48641 242.705 1.24189 239.612 4.21578 239.22C8.42765 238.666 12.6784 238.206 16.9205 237.971C19.4094 237.834 21.9011 237.806 24.3859 237.591C25.604 237.486 28.5461 237.596 29.6524 236.858C30.2563 236.456 28.5005 235.972 27.8878 235.583C26.106 234.45 24.321 233.323 22.5399 232.189C18.6314 229.702 14.7842 226.948 11.6812 223.475C11.1457 222.876 8.04841 220.005 8.26066 219.05C8.6341 217.37 15.298 216.106 16.5947 215.657C17.6481 215.292 25.9372 213.426 26.0419 212.345C26.2095 210.612 19.3273 206.742 18.2236 205.884C13.7695 202.42 9.32041 198.887 5.30166 194.917C3.26454 192.904 3.95133 193.119 6.2518 192.555C11.3203 191.312 16.188 189.453 21.2912 188.293C21.8921 188.156 29.6974 186.965 28.105 185.904C23.9719 183.148 19.5759 180.862 15.5089 177.977C12.9344 176.151 7.4618 173.323 6.33324 170.05C5.94956 168.937 24.5728 163.967 26.5305 163.209C30.2882 161.754 31.2269 161.44 27.6707 158.866C21.528 154.419 14.7327 150.952 8.88504 146.079C6.52226 144.11 4.03004 142.271 7.63629 140.786C11.7514 139.091 16.038 137.753 20.3139 136.524C20.7778 136.39 26.8265 135.34 26.5848 134.433C25.9498 132.052 21.023 130.216 19.2008 129.113C16.8335 127.679 13.5573 125.725 12.2513 123.113C11.5892 121.789 18.2742 120.092 19.0108 119.856C23.3007 118.477 27.5365 117.128 31.6613 115.295C35.0733 113.778 29.2692 112.345 27.5078 111.304C25.9608 110.39 6.32102 98.8727 8.01634 96.7536C9.70953 94.6371 26.6252 91.2879 26.4491 89.9668C26.3487 89.2141 24.1371 87.9649 23.7072 87.6322C21.6871 86.0688 19.6887 84.4798 17.6535 82.9358C14.3728 80.447 11.3056 77.1378 7.79917 75.0089C6.15339 74.0097 6.96106 73.5949 8.66787 72.9186C14.2871 70.6921 20.6329 69.2983 26.5305 68.0322C26.8877 67.9555 33.8504 66.9987 31.9599 65.6432C28.935 63.4744 25.5172 62.1018 22.5671 59.7252C20.6909 58.2139 18.3067 56.7607 16.8119 54.8388C15.6313 53.3208 19.5888 52.7322 20.4225 52.3956C23.1748 51.284 25.9939 50.5079 28.7837 49.518C31.1743 48.6698 28.2892 47.1728 27.2363 46.3961C23.0865 43.3348 18.8188 40.4223 14.6945 37.3291C14.0481 36.8443 10.4893 34.3195 10.6224 33.1213C10.7422 32.0433 15.6057 30.7084 16.3776 30.4066C19.9194 29.0218 23.5862 27.849 27.182 26.6061C29.6123 25.766 27.5668 25.3848 25.9333 24.5972C21.3836 22.4036 17.6533 19.5762 13.9615 16.1545C13.7807 15.9869 11.226 13.8458 11.8169 13.3041C13.8947 11.3994 18.4913 10.7677 21.0468 9.6393C21.3791 9.4926 26.6361 7.14635 25.6889 6.43596C24.1794 5.30378 22.7805 4.07692 21.3726 2.82542"
-                    stroke="url(#paint0_linear_0_3)" stroke-width="5" stroke-linecap="round" />
-                <defs>
-                    <linearGradient id="paint0_linear_0_3" x1="17.9454" y1="308.716" x2="17.9454" y2="2.82542"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#589C4F" stop-opacity="0.5" />
-                        <stop offset="1" stop-color="#589C4F" />
-                    </linearGradient>
-                </defs>
-            </svg>
-
-
-            <h2>Purposefully building only for SaaS</h2>
-
-            <h3>Other support tools are generic. When you will use ListenUser, you will wonder why you didn't get it
-                before. That's the difference.</h3>
-
-            <div class="three-major-pains">
-
-                <div class="three-pain-cards">
-                    <div class="pain-card-container before">
-                        <p class="heading">Without ListenUser.com</p>
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-                            <span>
-                                Feature suggestions getting lost in the support queries.
-                            </span>
-                        </p>
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-                            <span>
-                                Bug reports from users cannot be tracked on your issue tracker.
-                            </span>
-                        </p>
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-                            <span>
-                                Drowning with support requests in a one-size-fits-all support tool.
-                            </span>
-                        </p>
-                    </div>
-
-                    <div class="pain-card-container after">
-                        <img class="logo-img heading" src="ListenUser Logo.svg" alt="Logo">
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3E9B4F">
-                                <path fill-rule="evenodd"
-                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-
-                            <span>
-                                Keep track of feature suggestions from your customers to guide your product direction.
-                            </span>
-                        </p>
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3E9B4F">
-                                <path fill-rule="evenodd"
-                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-
-                            <span>
-                                Create GitHub issues from user bug reports within our platform.
-                            </span>
-                        </p>
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3E9B4F">
-                                <path fill-rule="evenodd"
-                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-
-                            <span>
-                                Enjoy helping your customers in a support tool designed exclusively for SaaS teams.
-                            </span>
-                        </p>
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3E9B4F">
-                                <path fill-rule="evenodd"
-                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-
-                            <span>
-                                Reduce your churn rate by making your customers realise that you listen to them.
-                            </span>
-                        </p>
-
-                        <p class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3E9B4F">
-                                <path fill-rule="evenodd"
-                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-
-                            <span>
-                                Collaborate with your developers and the whole team to solve user queries.
-                            </span>
-                        </p>
-                    </div>
+            <div class="cta-area">
+                <div class="buttons">
+                    <a href="#" class="primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        <span>
+                            Get started
+                        </span>
+                    </a>
+                    <a href="#" class="secondary">Request a demo</a>
+                </div>
+                <div class="below-cta">
+                    No credit card required • 20 days free trial
                 </div>
             </div>
+
+
+            <figure>
+                <img src="/main-shot.png" alt="Product Shot">
+            </figure>
         </section>
 
-        <section class="manifesto full-width-container">
+        <section class="feature-side-by-side">
+            <div class="text-area">
+                <div class="head-chip">
+                    IN-APP WIDGET
+                </div>
 
-            <div class="section-heading section-container inside-main-container-area center-container">
-                <h2>
-                    Our manifesto
+                <h2 class="head">
+                    Receive customer messages & feedback right from your product
                 </h2>
-                <h3>Why are we doing this? Our values and our insights.</h3>
-            </div>
 
-            <div class="paper inside-main-container-area center-container">
+                <div class="description">
+                    <ul>
+                        <li>
+                            Embed the ListenUser widget to your web app and instantly start receiving customer messages,
+                            feature
+                            suggestions and bug reports.
+                        </li>
 
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.4299486996717 64.64154831218161"
-                    width="454.2898460990151" height="193.92464493654484">
-                    <defs>
-                        <symbol id="image-984a4b5074ad887b961005572cec4aee6e72218e">
-                            <image
-                                href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9Ii0yNyAwIDMxMCAzMTAiIHZlcnNpb249IjEuMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPgogICAgPGc+CiAgICAgICAgPHBhdGggZD0iTTE4LjQzMiwxODAuOTY4NzI3IEwxMDguOTE2MzY0LDkwLjQ4NDM2MzYgQzEyMC42NDU4MTgsNzguOTQxMDkwOSAxMjcuOTA2OTA5LDYyLjc0MzI3MjcgMTI3LjkwNjkwOSw0NS4wNTYgQzEyNy45MDY5MDksMjcuNTU0OTA5MSAxMjAuODMyLDExLjU0MzI3MjcgMTA5LjQ3NDkwOSwwIEwxOC45OTA1NDU1LDkwLjQ4NDM2MzYgQzcuMjYxMDkwOTEsMTAyLjAyNzYzNiAwLDExOC4yMjU0NTUgMCwxMzUuOTEyNzI3IEMwLDE1My42IDcuMDc0OTA5MDksMTY5LjQyNTQ1NSAxOC40MzIsMTgwLjk2ODcyNyBaIE0yMzcuNTY4LDEyOC4wOTMwOTEgTDE0Ny4wODM2MzYsMjE4LjU3NzQ1NSBDMTM1LjM1NDE4MiwyMzAuMTIwNzI3IDEyOC4wOTMwOTEsMjQ2LjMxODU0NSAxMjguMDkzMDkxLDI2NC4wMDU4MTggQzEyOC4wOTMwOTEsMjgxLjUwNjkwOSAxMzUuMTY4LDI5Ny41MTg1NDUgMTQ2LjUyNTA5MSwzMDkuMDYxODE4IEwyMzcuMDA5NDU1LDIxOC41Nzc0NTUgQzI0OC43Mzg5MDksMjA3LjAzNDE4MiAyNTYsMTkwLjgzNjM2NCAyNTYsMTczLjE0OTA5MSBDMjU2LDE1NS40NjE4MTggMjQ4LjkyNTA5MSwxMzkuNjM2MzY0IDIzNy41NjgsMTI4LjA5MzA5MSBaIE0yMzcuMDA5NDU1LDkwLjY3MDU0NTUgQzI0OC43Mzg5MDksNzkuMTI3MjcyNyAyNTYsNjIuOTI5NDU0NSAyNTYsNDUuMjQyMTgxOCBDMjU2LDI3Ljc0MTA5MDkgMjQ4LjkyNTA5MSwxMS43Mjk0NTQ1IDIzNy41NjgsMC4xODYxODE4MTggTDE4Ljk5MDU0NTUsMjE4LjU3NzQ1NSBDNy4yNjEwOTA5MSwyMzAuMzA2OTA5IDAsMjQ2LjMxODU0NSAwLDI2NC4xOTIgQzAsMjgxLjY5MzA5MSA3LjA3NDkwOTA5LDI5Ny43MDQ3MjcgMTguNDMyLDMwOS4yNDggTDIzNy4wMDk0NTUsOTAuNjcwNTQ1NSBaIiBmaWxsPSIjMTI5MkVFIj4KCjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+"
-                                preserveAspectRatio="none" width="100%" height="100%"></image>
-                        </symbol>
-                        <symbol id="image-bf34fea7f3b1fb3c9180dda9e06dcf42c1fa3a41">
-                            <image
-                                href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+CiAgIDxjaXJjbGUgY3g9IjUxMiIgY3k9IjUxMiIgcj0iNTEyIiBzdHlsZT0iZmlsbDojMDMzNjNkIi8+CiAgIDxwYXRoIHRyYW5zZm9ybT0idHJhbnNsYXRlKC4wMDEgLjczNikiIGQ9Ik00OTUuMSA0MzJ2MjQ3LjNIMjkwLjNMNDk1LjEgNDMyem0wLTg4LjdjMCA1Ni42LTQ1LjggMTAyLjQtMTAyLjQgMTAyLjRzLTEwMi40LTQ1LjgtMTAyLjQtMTAyLjRoMjA0Ljh6bTMzLjggMzM2YzAtNTYuNiA0NS44LTEwMi40IDEwMi40LTEwMi40czEwMi40IDQ1LjggMTAyLjQgMTAyLjRINTI4Ljl6bTAtODguOFYzNDMuM2gyMDQuOEw1MjguOSA1OTAuNXoiIHN0eWxlPSJmaWxsOiNmZmYiLz4KPC9zdmc+"
-                                preserveAspectRatio="none" width="100%" height="100%"></image>
-                        </symbol>
-                        <symbol id="image-e7b3063ade598b9781f15d318d22fffbff411e05">
-                            <image
-                                href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiMwMDAwMDAiIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBkYXRhLW5hbWU9IkxheWVyIDEiPjxwYXRoIGQ9Ik0xOS41LDJINC41QTIuNSwyLjUsMCwwLDAsMiw0LjV2MTVBMi41LDIuNSwwLDAsMCw0LjUsMjJoMTVBMi41LDIuNSwwLDAsMCwyMiwxOS41VjQuNUEyLjUsMi41LDAsMCwwLDE5LjUsMlpNMTQuNjcsNS42N0EuNjYuNjYsMCwwLDEsMTUuMzQsNWEuNjguNjgsMCwwLDEsLjY2LjY2djguOWEuNjcuNjcsMCwwLDEtMS4zMywwWm0tMy4zNC0uMzRBLjY3LjY3LDAsMCwxLDEyLDQuNjZoMGEuNjcuNjcsMCwwLDEsLjY3LjY3VjE1YS42Ny42NywwLDAsMS0xLjM0LDBaTTgsNS42N2EuNjcuNjcsMCwwLDEsMS4zMywwdjguOWEuNjYuNjYsMCwwLDEtLjY3LjY2QS42OC42OCwwLDAsMSw4LDE0LjU3Wk00LjY3LDdBLjY3LjY3LDAsMCwxLDYsN3Y2YS42Ny42NywwLDAsMS0uNjcuNjZBLjY3LjY3LDAsMCwxLDQuNjcsMTNaTTE5LjEsMTcuMTdBMTEuMywxMS4zLDAsMCwxLDEyLDE5LjMzYTExLjMsMTEuMywwLDAsMS03LjEtMi4xNi42Ny42NywwLDAsMSwuODctMUExMC4yLDEwLjIsMCwwLDAsMTIsMThhMTAuMTUsMTAuMTUsMCwwLDAsNi4yMy0xLjg0LjY3LjY3LDAsMCwxLC44NywxWk0xOS4zMywxM0EuNjcuNjcsMCwwLDEsMTgsMTNWN2EuNjcuNjcsMCwwLDEsLjY3LS42Ni42Ni42NiwwLDAsMSwuNjYuNjZaIi8+PC9zdmc+"
-                                preserveAspectRatio="none" width="100%" height="100%"></image>
-                        </symbol>
-                        <style class="style-fonts">
-                        </style>
-                    </defs>
-                    <g transform="translate(10 10) rotate(0 22.320774156090806 22.320774156090806)">
-                        <use href="#image-e7b3063ade598b9781f15d318d22fffbff411e05" width="45" height="45" opacity="1">
-                        </use>
-                    </g>
-                    <g
-                        transform="translate(56.873631237301026 12.100776269242488) rotate(0 20.21999788684839 20.219997886848375)">
-                        <use href="#image-bf34fea7f3b1fb3c9180dda9e06dcf42c1fa3a41" width="40" height="40" opacity="1">
-                        </use>
-                    </g>
-                    <g
-                        transform="translate(99.93956979999945 11.575584706254745) rotate(0 20.745189449836133 20.74518944983612)">
-                        <use href="#image-984a4b5074ad887b961005572cec4aee6e72218e" width="41" height="41" opacity="1">
-                        </use>
-                    </g>
-                </svg>
-
-                <p>
-                    <strong>VC-funded customer support players have ruined the field.</strong>
-                </p>
-
-                <p>They took VC money and built bloated tools to serve every possible industry.</p>
-
-                <p>SaaS companies had to struggle with these generic tools.</p>
-
-                <p>Now, no more!</p>
-
-                <p>
-                    We are building a customer support tool from the ground up — designed exclusively for
-                    SaaS companies.
-                </p>
-
-                <p>Because for SaaS companies...</p>
-
-                <p>
-                    Feature suggestions from customers guide the direction of the product.
-                    Understanding the root
-                    cause of these suggestions is how customer's needs are understood.
-                </p>
-                <p>
-                    Bug reports from customers should be tracked on the issue tracker.
-                </p>
-                <p>
-                    And finally, a bad customer support experience usually results in churn. Nobody wants that.
-                </p>
-
-                <p>That's why we deeply believe — for SaaS, customer support and user feedback should be one tool.</p>
-
-                <p>We are completely bootstrapped, focused, and building for founders like you — not VCs.</p>
-
-                <p>Drop your email below to join us in this journey as we will be sharing our progress along the way and
-                    we'll incorporate your feedback
-                    into the product.
-                </p>
-
-
-                <p>When
-                    we launch,
-                    we will onboard your team personally as our first set of users!</p>
-
-                <div id="manifesto-email-collection" class="email-collection-container">
-                    <form method="POST" data-netlify="true" name="early-access-form" class="email-submit-box">
-                        <input required type="email" placeholder="Email" class="email-input" name="email-address" />
-
-                        <p class="thank-you">
-                            Thank you so much for being part of our early access.
-                            <br>
-                            I will write an email to you at the soonest! 💛
-                            <br><br>
-                            — Vivek (Founder, ListenUser.com)
-                        </p>
-
-                        <button class="email-button" type="submit">
-                            <span class="btn-text">Early access</span>
-
-                            <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
-                            </svg>
-
-                            <svg class="in-progress-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                            </svg>
-
-                            <svg class="done-success-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-
-                <p>Let us make it!</p>
-
-                <div class="signature">
-                    <img src="vk-nice.png" alt="Vivek Agrawal" class="picture">
-
-                    <span class="signature-content">
-                        Vivek Agrawal (Founder, ListenUser.com)
-                    </span>
+                        <li>
+                            Easily prioritise customer messages by their pricing plan or MRR with help of our widget SDK
+                            methods.
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+
+            <figure class="image-area">
+                <img src="./in-app-widget.png" alt="In-app widget">
+            </figure>
+
+        </section>
+
+        <section class="feature-top-bottom">
+            <div class="text-area">
+                <div class="head-chip">
+                    EMAIL INBOX
+                </div>
+
+                <h2>
+                    Make ListenUser your new home for customer emails
+                </h2>
+
+                <div class="description">
+                    After setting up ListenUser with your company's email like <code>support@company.com</code>, handle
+                    all customer emails and in-app messages from one neat place — the ListenUser inbox.
+                </div>
+            </div>
+
+
+            <figure class="image-area">
+                <img src="./email-inbox.png" alt="Email inbox">
+            </figure>
+
+        </section>
+
+        <section class="feature-top-bottom user-data">
+            <div class="text-area">
+                <div class="head-chip">
+                    CUSTOMER DETAILS
+                </div>
+
+                <h2>
+                    Have customer's context when replying to their messages
+                </h2>
+
+                <div class="description">
+                    When customers send you messages from the in-app widget, you can attach their pricing plan, MRR,
+                    company details to have the required context for prioritization and for understanding their request
+                    better.
+                </div>
+            </div>
+
+
+            <figure class="image-area">
+                <img src="./user-data-2.png" alt="Email inbox">
+            </figure>
+
+        </section>
+
+        <section class="feature-top-bottom team">
+            <div class="text-area">
+                <div class="head-chip">
+                    TEAM COLLABORATION
+                </div>
+
+                <h2>
+                    Collaborate with your team members to get it done
+                </h2>
+
+                <div class="description">
+                    Assign threads to your team members, @ mention them to bring their attention and there's notifications to keep the team in the loop.
+                </div>
+            </div>
+
+
+            <figure class="image-area">
+                <img src="./team.png" alt="Email inbox">
+            </figure>
+
         </section>
     </main>
 </body>
