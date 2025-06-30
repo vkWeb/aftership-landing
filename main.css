@@ -91,7 +91,7 @@ html {
   color: var(--black-color);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   html {
     font-size: 12px;
   }
@@ -99,18 +99,19 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: 1fr min(98%, 75rem) 1fr;
+  grid-template-columns: 1fr min(94%, 75rem) 1fr;
   justify-items: center;
 
   header {
     grid-column: 2;
-    width: 60%;
+    inline-size: 100%;
+    max-inline-size: 48rem;
     margin-bottom: 3.5rem;
   }
 
   main {
     grid-column: 2;
-    width: 100%;
+    inline-size: 100%;
     margin-bottom: 10rem;
 
     display: flex;
@@ -213,11 +214,12 @@ header {
 /* --------------------------- */
 
 section.hero {
-  padding: 4rem 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   text-align: center;
 
   h1 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 600;
     margin-bottom: 1rem;
   }
@@ -248,21 +250,14 @@ section.hero {
     }
   }
 
-  figure {
+  img {
     margin-inline: auto;
-    border: 1px solid #d9d9d9;
+    width: 100%;
+    border: 4px solid #f9f9f9;
+    height: auto;
     border-radius: 0.6rem;
-
     box-shadow: 0px 4px 16px rgba(17, 17, 26, 0.1),
       0px 8px 24px rgba(17, 17, 26, 0.1), 0px 16px 56px rgba(17, 17, 26, 0.1);
-
-    img {
-      margin-inline: auto;
-      width: 100%;
-      border: 10px solid #f9f9f9;
-      height: auto;
-      border-radius: 0.6rem;
-    }
   }
 }
 
@@ -292,15 +287,24 @@ code {
 
 section.feature-side-by-side {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
+  flex-wrap: nowrap;
   gap: 1.8rem;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
 
   > .text-area {
     flex: 1 1 1fr;
 
     padding-top: 4rem;
     padding-left: 5rem;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
 
     .description {
       margin-top: 2.5rem;
@@ -368,14 +372,16 @@ section.feature-top-bottom {
     background-color: #ffe9f0;
   }
 
-  > figure.image-area {
-    > img {
-      border-radius: 0.6rem;
-      margin-inline: auto;
-      width: 60%;
-      height: auto;
-      box-shadow: 0px 4px 16px rgba(17, 17, 26, 0.1),
-        0px 8px 24px rgba(17, 17, 26, 0.1), 0px 16px 56px rgba(17, 17, 26, 0.1);
+  > img {
+    border-radius: 0.6rem;
+    margin-inline: auto;
+    height: auto;
+    box-shadow: 0px 4px 16px rgba(17, 17, 26, 0.1),
+      0px 8px 24px rgba(17, 17, 26, 0.1), 0px 16px 56px rgba(17, 17, 26, 0.1);
+
+    width: 65%;
+    @media (max-width: 768px) {
+      width: 95%;
     }
   }
 }
@@ -386,9 +392,12 @@ section.feature-top-bottom.user-data {
     background-color: #fbebfb;
   }
 
-  figure.image-area > img {
+  > img {
     width: 85%;
-    height: auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 
@@ -398,9 +407,12 @@ section.feature-top-bottom.team {
     background-color: #edf2fe;
   }
 
-  figure.image-area > img {
+  > img {
     width: 70%;
-    height: auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 
@@ -471,6 +483,7 @@ section.pricing {
     .price-area {
       display: flex;
       align-items: baseline;
+      justify-content: center;
       gap: 0.3rem;
 
       .currency {
