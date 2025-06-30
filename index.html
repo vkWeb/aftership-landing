@@ -20,6 +20,29 @@
     <!-- Favicons END -->
 
     <title>ListenUser: customer support & feedback tool for SaaS</title>
+
+    <!-- PRODUCTION LISTENUSER Widget -->
+    <script type="text/javascript">
+        (function () {
+            window.ListenUser = {};
+            window.ListenUser.queue = [];
+            window.ListenUser.organizationId = "97135c5b-f746-4c3b-bbae-92635e4cb7b9";
+
+            window.ListenUser.run = function (functionName, argsObj) {
+                window.ListenUser.queue.push({
+                    fn: functionName,
+                    argsObj: argsObj,
+                });
+            };
+
+            // Load the widget bundle asynchronously.
+            var script = document.createElement("script");
+            script.src = "https://unpkg.com/listenuser-in-app-support@latest/dist/listenuser-widget.iife.js";
+            script.async = true;
+            document.head.appendChild(script);
+        })();
+    </script>
+    <!-- PRODUCTION LISTENUSER Widget ENDs -->
 </head>
 
 <body>
@@ -33,7 +56,7 @@
             <ul>
                 <li><a href="#product">Product</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#get-started">Get started</a></li>
+                <li><a href="https://app.listenuser.com" target="_blank">Start free trial</a></li>
             </ul>
         </nav>
     </header>
@@ -52,16 +75,18 @@
 
             <div class="cta-area">
                 <div class="buttons">
-                    <a href="#" class="cta primary">
+                    <a href="https://app.listenuser.com" target="_blank" class="cta primary">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
                         </svg>
                         <span>
-                            Get started
+                            Start free trial
                         </span>
                     </a>
-                    <a href="#" class="cta secondary">Request a demo</a>
+                    <a href="https://calendly.com/vivek-listenuser/30min" target="_blank" class="cta secondary">
+                        Request a demo
+                    </a>
                 </div>
                 <div class="below-cta">
                     No credit card required • 20 day free trial
@@ -72,7 +97,7 @@
 
         </section>
 
-        <section class="feature-side-by-side">
+        <section id="product" class="feature-side-by-side">
             <div class="text-area">
                 <div class="head-chip">
                     IN-APP WIDGET
@@ -92,7 +117,7 @@
 
                         <li>
                             Easily prioritise customer messages by their pricing plan or MRR with help of our widget SDK
-                            methods.
+                            method.
                         </li>
                     </ul>
                 </div>
@@ -211,7 +236,8 @@
                     </ul>
 
                     <div class="cta-area">
-                        <a href="#" class="cta primary pro" aria-label="Start 20-day trial – Pro plan">
+                        <a href="https://app.listenuser.com" target="_blank" class="cta primary pro"
+                            aria-label="Start 20-day trial – Pro plan">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -219,7 +245,7 @@
                             </svg>
 
                             <span>
-                                Get started for free
+                                Start free trial
                             </span>
                         </a>
 
@@ -251,7 +277,8 @@
                     </ul>
 
                     <div class="cta-area">
-                        <a href="#" class="cta primary scale" aria-label="Start 20-day trial – Scale plan">
+                        <a href="https://app.listenuser.com" target="_blank" class="cta primary scale"
+                            aria-label="Start 20-day trial – Scale plan">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -259,7 +286,7 @@
                             </svg>
 
                             <span>
-                                Get started for free
+                                Start free trial
                             </span>
                         </a>
                         <p class="footnote">No credit card required • 20 day free trial</p>
@@ -277,27 +304,27 @@
                 Start listening to your customers with ListenUser today!
             </h2>
 
-            <a href="#" class="cta primary">
+            <a href="https://app.listenuser.com" target="_blank" class="cta primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
                 </svg>
                 <span>
-                    Get started for free
+                    Start free trial today
                 </span>
             </a>
 
             <hr class="separator">
 
             <ul class="pill-links">
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Our journey so far</a></li>
-                <li><a href="#">Reach the founder directly</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="/blog" target="_blank">Our journey so far</a></li>
+                <li><a href="mailto:vivek@listenuser.com" target="_blank">Reach the founder directly</a></li>
             </ul>
 
             <p class="copyright">
-                &copy; 2025 ListenUser, All rights reserved.
+                &copy; 2025 ListenUser. All rights reserved.
             </p>
         </section>
     </main>

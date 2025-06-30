@@ -89,6 +89,7 @@ html {
   line-height: 1.35;
   font-size: 16px;
   color: var(--black-color);
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {
@@ -151,8 +152,17 @@ a.cta {
   }
 
   &.secondary {
-    border: 2px solid #4a4a4a;
+    max-height: fit-content;
+    padding: 0.4rem 1rem;
+    border: 1px solid #4a4a4a;
     color: #4a4a4a;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 0.4rem;
+  }
+
+  &.secondary:hover {
+    background: #F0F0F0;
   }
 }
 
@@ -240,6 +250,7 @@ section.hero {
 
     .buttons {
       display: flex;
+      align-items: center;
       justify-content: center;
       gap: 1rem;
     }
