@@ -162,7 +162,7 @@ a.cta {
   }
 
   &.secondary:hover {
-    background: #F0F0F0;
+    background: #f0f0f0;
   }
 }
 
@@ -632,5 +632,12 @@ section.footer-and-end-cta {
   .copyright {
     font-size: 0.9rem;
     color: #646464;
+  }
+
+  img#indie-built {
+    width: 9.5rem;
+    height: auto;
+    opacity: 0.45;
+    transform: rotate(-5deg);
   }
 }
