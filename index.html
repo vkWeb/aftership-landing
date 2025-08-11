@@ -1,345 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListenUser</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
 
-    <!-- Stylesheets Start -->
-    <link href="/main.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <!-- Stylesheets End -->
+        body {
+            margin: 0;
+            background: #ffffff;
+            font-family: system-ui;
+            display: grid;
+            place-items: center;
+        }
 
+        .message {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+            font-size: 2rem;
+            font-weight: 500;
+        }
 
-    <!-- Favicons START -->
-    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-    <!-- Favicons END -->
-
-    <title>ListenUser: customer support & feedback tool for SaaS</title>
-
-    <!-- posthog for landing -->
-    <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Ie Ts Ms Ee Es Rs capture Ge calculateEventProperties Os register register_once register_for_session unregister unregister_for_session js getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ds Fs createPersonProfile Ls Ps opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Cs debug I As getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('phc_3i7dei5CYV7mlWpn0f6T81A0i75CQmhfSWX479pS8cF', {
-            api_host: 'https://us.i.posthog.com',
-            defaults: '2025-05-24',
-            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-        })
-    </script>
-
-
-    <!-- PRODUCTION LISTENUSER Widget -->
-    <script type="text/javascript">
-        (function () {
-            window.ListenUser = {};
-            window.ListenUser.queue = [];
-            window.ListenUser.organizationId = "97135c5b-f746-4c3b-bbae-92635e4cb7b9";
-
-            window.ListenUser.run = function (functionName, argsObj) {
-                window.ListenUser.queue.push({
-                    fn: functionName,
-                    argsObj: argsObj,
-                });
-            };
-
-            // Load the widget bundle asynchronously.
-            var script = document.createElement("script");
-            script.src = "https://unpkg.com/listenuser-in-app-support@latest/dist/listenuser-widget.iife.js";
-            script.async = true;
-            document.head.appendChild(script);
-        })();
-    </script>
-    <!-- PRODUCTION LISTENUSER Widget ENDs -->
+        .message img {
+            height: 2em;
+            width: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header Navigation -->
-    <header>
-        <a href="/" class="logo">
-            <img src="/ListenUser Logo.svg" alt="ListenUser Logo">
-        </a>
-
-        <nav aria-label="Primary">
-            <ul>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="https://app.listenuser.com" target="_blank">Start free trial</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <main>
-        <section class="hero">
-            <h1>
-                Customer support and user feedback for modern software companies
-            </h1>
-
-            <p>
-                Provide in-app & email support to your customers and listen to their feedback with a
-                purpose-made tool.
-            </p>
-
-            <div class="cta-area">
-                <div class="buttons">
-                    <a href="https://app.listenuser.com" target="_blank" class="cta primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                        </svg>
-                        <span>
-                            Start free trial
-                        </span>
-                    </a>
-                    <a href="https://calendly.com/vivek-listenuser/30min" target="_blank" class="cta secondary">
-                        Request a demo
-                    </a>
-                </div>
-                <div class="below-cta">
-                    No credit card required • 20 day free trial
-                </div>
-            </div>
-
-            <img src="/main-shot.png" alt="Product Shot for the hero section">
-
-        </section>
-
-        <section id="product" class="feature-side-by-side">
-            <div class="text-area">
-                <div class="head-chip">
-                    IN-APP WIDGET
-                </div>
-
-                <h2 class="head">
-                    Receive customer messages & feedback right from your product
-                </h2>
-
-                <div class="description">
-                    <ul>
-                        <li>
-                            Embed the ListenUser widget to your web app and instantly start receiving customer messages,
-                            feature
-                            suggestions and bug reports.
-                        </li>
-
-                        <li>
-                            Easily prioritise customer messages by their pricing plan or MRR with help of our widget SDK
-                            method.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <figure class="image-area">
-                <img src="./in-app-widget.png" alt="In-app widget screenshot">
-            </figure>
-
-        </section>
-
-        <section class="feature-top-bottom">
-            <div class="text-area">
-                <div class="head-chip">
-                    EMAIL INBOX
-                </div>
-
-                <h2>
-                    Make ListenUser your new home for customer emails
-                </h2>
-
-                <div class="description">
-                    After setting up ListenUser with your company's email like <code>support@company.com</code>, handle
-                    all customer emails and in-app messages from one neat place — the ListenUser inbox.
-                </div>
-            </div>
-
-
-
-            <img src="./email-inbox.png" alt="A screenshot of the thread view of the ListenUser product">
-
-
-        </section>
-
-        <section class="feature-top-bottom user-data">
-            <div class="text-area">
-                <div class="head-chip">
-                    CUSTOMER DETAILS
-                </div>
-
-                <h2>
-                    Have customer's context when replying to their messages
-                </h2>
-
-                <div class="description">
-                    When customers send you messages from the in-app widget, you can attach their pricing plan, MRR,
-                    company details to have the required context for prioritization and for understanding their request
-                    better.
-                </div>
-            </div>
-
-
-
-            <img src="./user-data-2.png"
-                alt="A screenshot focusing on the user data part of the ListenUser's thread view">
-
-
-        </section>
-
-        <section class="feature-top-bottom team">
-            <div class="text-area">
-                <div class="head-chip">
-                    TEAM COLLABORATION
-                </div>
-
-                <h2>
-                    Collaborate with your team members to get it done
-                </h2>
-
-                <div class="description">
-                    Assign threads to your team members, @ mention them to bring their attention and there's
-                    notifications to keep the team in the loop.
-                </div>
-            </div>
-
-            <img src="./team.png"
-                alt="A screenshot of team memebers communicating via internal comments in the ListenUser's thread view">
-        </section>
-
-        <section class="pricing" id="pricing">
-            <div class="text-area">
-                <div class="head-chip">
-                    SIMPLE PRICING
-                </div>
-
-                <h2>
-                    Unlimited team members and unlimited conversations 🚀
-                </h2>
-
-                <div class="description">
-                    Bring all of your team. There's <strong>no per-seat pricing</strong>. Talk to all of your customers.
-                    That's simple and straightforward.
-                </div>
-            </div>
-            <div class="plan-grid">
-                <article class="plan">
-                    <span class="plan-pill pro">Pro Plan</span>
-
-                    <div class="price-area">
-                        <span class="currency">$</span>
-                        <span class="amount">26</span>
-                        <span class="per-period">per month</span>
-                    </div>
-
-                    <ul class="feature-list">
-                        <li class="ok">Unlimited team members</li>
-                        <li class="ok">Unlimited conversations</li>
-                        <li class="ok">Unlimited feedback</li>
-                        <li class="ok">In-app widget</li>
-                        <li class="ok">Email inbox</li>
-                        <li class="ok">Internal comments</li>
-                        <li class="ok">In-app and email notifications for important events</li>
-                        <li class="no">One on-demand integration of your choice (For e.g. Slack, Linear, GitHub, Jira)
-                        </li>
-                    </ul>
-
-                    <div class="cta-area">
-                        <a href="https://app.listenuser.com" target="_blank" class="cta primary pro"
-                            aria-label="Start 20-day trial – Pro plan">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                            </svg>
-
-                            <span>
-                                Start free trial
-                            </span>
-                        </a>
-
-                        <p class="footnote">No credit card required • 20 day free trial</p>
-                    </div>
-
-                </article>
-
-                <article class="plan">
-                    <span class="plan-pill scale">Scale Plan</span>
-
-                    <div class="price-area">
-                        <span class="currency">$</span>
-                        <span class="amount">49</span>
-                        <span class="per-period">per month</span>
-                    </div>
-
-
-                    <ul class="feature-list">
-                        <li class="ok">Unlimited team members</li>
-                        <li class="ok">Unlimited conversations</li>
-                        <li class="ok">Unlimited feedback</li>
-                        <li class="ok">In-app widget</li>
-                        <li class="ok">Email inbox</li>
-                        <li class="ok">Internal comments</li>
-                        <li class="ok">In-app and email notifications for important events</li>
-                        <li class="ok">One on-demand integration of your choice (For e.g. Slack, Linear, GitHub, Jira)
-                        </li>
-                    </ul>
-
-                    <div class="cta-area">
-                        <a href="https://app.listenuser.com" target="_blank" class="cta primary scale"
-                            aria-label="Start 20-day trial – Scale plan">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                            </svg>
-
-                            <span>
-                                Start free trial
-                            </span>
-                        </a>
-                        <p class="footnote">No credit card required • 20 day free trial</p>
-                    </div>
-
-                </article>
-            </div>
-        </section>
-
-        <section class="footer-and-end-cta">
-
-            <img src="./ListenUser Logo (L - only).svg" alt="ListenUser Logo which shows only letter 'L'">
-
-            <h2>
-                Start listening to your customers with ListenUser today!
-            </h2>
-
-            <a href="https://app.listenuser.com" target="_blank" class="cta primary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                </svg>
-                <span>
-                    Start free trial today
-                </span>
-            </a>
-
-            <hr class="separator">
-
-            <ul class="pill-links">
-                <li><a href="#product">Product</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="/blog" target="_blank">Our journey so far</a></li>
-                <li><a href="mailto:vivek@listenuser.com" target="_blank">Reach the founder directly</a></li>
-            </ul>
-
-            <p class="copyright">
-                &copy; 2025 ListenUser. All rights reserved.
-            </p>
-
-            <img id="indie-built" src="./INDIE-BUILT.svg" alt="a image / stamp on which its written 'indie-built'">
-        </section>
+    <main class="message">
+        <img src="ListenUser Logo (L - only).svg" alt="ListenUser logo">
+        <span>ListenUser is on pause for some time.</span>
     </main>
 </body>
 
